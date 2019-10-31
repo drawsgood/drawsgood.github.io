@@ -197,6 +197,11 @@ footer {
 	margin-top: 100px;
 	color: #278dc9;
 	font-size: smaller;
+	text-align: center;
+}
+
+.footer-info {
+	width: 80%;
 }
 
 .footer-info a{
