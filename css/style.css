@@ -283,12 +283,12 @@ footer {
 	  width: 90%;
   }
   
-	  .detail-info-even {
-		  flex-direction: column;
-		  justify-content: center;
-		  margin: auto;
-		  width: 90%;
-	  }
+	.detail-info-even {
+		flex-direction: column-reverse;
+		justify-content: center;
+		margin: auto;
+		width: 90%;
+	}
   
 	#logo {
 		margin-left: 3%;
