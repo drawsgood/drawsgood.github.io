@@ -280,21 +280,19 @@ footer {
 		width: 70%;
 	}
 
-	.footer-info {
-	width: 60%;
-}
-  
-  }
 
-  @media screen and (max-width: 960px) {
-
-    	.king {
+    .king {
   		display: none;
   	}
 
   	.queen {
   		display: none;
   	}
+
+	.footer-info {
+	width: 80%;
+}
+  
   }
 
   @media screen and (max-width: 600px) {
