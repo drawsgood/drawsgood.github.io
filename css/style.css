@@ -188,6 +188,28 @@ nav {
 	color: #a13c25;
 }
 
+.king {
+	position: fixed;
+	bottom: -6px;
+	left: 25px;
+}
+
+.king img {
+	width: 235px;
+	height: 192px;
+}
+
+.queen {
+	position: fixed;
+	bottom: -6px;
+	right: 25px;
+}
+
+.queen img {
+	width: 235px;
+	height: 192px;
+}
+
 footer {
 	display: flex;
 	flex-direction: column;
@@ -202,7 +224,7 @@ footer {
 }
 
 .footer-info {
-	width: 80%;
+	width: 50%;
 }
 
 .footer-info a{
@@ -257,7 +279,22 @@ footer {
 	.intro-text {
 		width: 70%;
 	}
+
+	.footer-info {
+	width: 60%;
+}
   
+  }
+
+  @media screen and (max-width: 960px) {
+
+    	.king {
+  		display: none;
+  	}
+
+  	.queen {
+  		display: none;
+  	}
   }
 
   @media screen and (max-width: 600px) {
