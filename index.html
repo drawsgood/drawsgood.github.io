@@ -7,6 +7,9 @@
 	<meta name="Keywords" content="pixel art, pixelart, retro, poker, magic, playing card, playing cards, cards, 8bit, uspcc, PICO-8, aseprite, kickstarter, drawsgood">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="src/jquery.basic.toast.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="src/jquery.basic.toast.js"></script>
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
@@ -263,5 +266,12 @@
 		<p style="font-size: 16px;" class="footer-info">If you are interested in purchasing wholesale, please <a href="mailto:mike@drawsgood.com">contact me</a> for more information</p>
 
 	</footer>
+		<script type="text/javascript">
+		$(function () {
+    $(document).ready(function(){
+    	$.Toast('Happy Holidays! Just a heads up, order before December 20th to get your decks in time for Christmas! (US Only. Any International orders will not make it in time for the holidays)', {'duration': 10000, 'position': 'top', 'align': 'left', 'width': 400});
+    });
+});
+</script>
 </body>
 </html>
