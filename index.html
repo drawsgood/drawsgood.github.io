@@ -17,7 +17,8 @@
 	<header>
 		<nav>
 			<div id="logo">
-				<img src="images/logo.png">
+				<canvas id="canvas" class="myRiv" width="75" height="44.5"></canvas>
+				<!-- <img src="images/logo.png"> -->
 			</div>
 			<ul id="nav-links">
 				<li><a href="#about">About</a></li>
@@ -277,5 +278,20 @@
     });
 });
 </script> -->
+<script src="https://unpkg.com/@rive-app/canvas@2.21.5"></script>
+<script>
+    const r = new rive.Rive({
+        src: "/images/8bitlogo.riv",
+        // OR the path to a discoverable and public Rive asset
+        // src: '/public/example.riv',
+        canvas: document.getElementById("canvas"),
+        autoplay: true,
+        // artboard: "Arboard", // Optional. If not supplied the default is selected
+        stateMachines: "State Machine 1",
+        onLoad: () => {
+          r.resizeDrawingSurfaceToCanvas();
+        },
+    });
+</script>
 </body>
 </html>
