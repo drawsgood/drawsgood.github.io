@@ -17,6 +17,8 @@ nav {
 	justify-content: space-between;
 	min-height: 80px;
 	background-color: #278dc9;
+	position: fixed;
+	width: 100%;
 }
 
 .holidayInfo {
@@ -50,19 +52,17 @@ nav {
 }
 
 #nav-links a {
-	color: rgba(255,255,255,.7);
+	color: rgba(255,255,255,.5);
 	padding: 10px 15px;
-	background-color: rgba(0,0,0,.3);
 	border-radius: 15px;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 #nav-links a:hover {
 	color: rgba(255,255,255,1);
 	padding: 10px 15px;
-	background-color: rgba(0,0,0,.5);
 	border-radius: 15px;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 #logo {
