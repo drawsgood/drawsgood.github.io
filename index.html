@@ -31,9 +31,14 @@
 			<div id="hero-image">
 			</div>
 			<div id="hero-info">
+
 				<span class="hero-title-text">The 8Bit Deck</span> <span class="tagline">By Drawsgood</span>
-				
-				<div style="margin:auto;" id='product-component-1572490427226'></div>
+				<div id="buttonContainer">
+				<div id="riveButton"><canvas id="canvas_cards" height="101px" width="273px"></canvas></div>
+				<div id='product-component-1572490427226'></div>
+				</div>
+
+
 				<script type="text/javascript">
 				/*<![CDATA[*/
 				(function () {
@@ -81,6 +86,7 @@
 						"color": "#5f2606",
 						"padding-top": "17px",
 						"padding-bottom": "17px",
+						"opacity": "100",
 						":hover": {
 						  "background-color": "#e59031"
 						},
@@ -293,5 +299,30 @@
         },
     });
 </script>
+<script>
+
+	const testThing = document.getElementById("product-component-1572490427226");
+
+		const b = new rive.Rive({
+			src: "/images/fancards.riv",
+			// OR the path to a discoverable and public Rive asset
+			// src: '/public/example.riv',
+			canvas: document.getElementById("canvas_cards"),
+			autoplay: true,
+			// artboard: "Arboard", // Optional. If not supplied the default is selected
+			stateMachines: "State Machine 1",
+			onLoad: () => {
+			b.resizeDrawingSurfaceToCanvas();
+			// Get the inputs via the name of the state machine
+			const inputs = b.stateMachineInputs('State Machine 1');
+            // Find the input you want to set a value for, or trigger
+            const bumpTrigger = inputs.find(i => i.name === 'cardsSmallOn');
+			testThing.onmouseover = () => bumpTrigger.value = true;
+			testThing.onmouseout = () => bumpTrigger.value = false;
+
+			},
+		});
+
+	</script>
 </body>
 </html>
