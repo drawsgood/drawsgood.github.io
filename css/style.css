@@ -19,6 +19,7 @@ nav {
 	background-color: #278dc9;
 	position: relative;
 	width: 100%;
+	z-index: 100;
 }
 
 .holidayInfo {
@@ -140,6 +141,22 @@ nav {
 
 #canvas_cards {
 	width: 340px;	
+}
+
+#bulbs_Canvas {
+	position: absolute;
+	top: 31px;
+	height: 120px;
+	pointer-events: none;
+	z-index: 10;
+}
+
+#snow_Canvas {
+	position: absolute;
+	top: 0px;
+	pointer-events: none;
+	width: 100%;
+	z-index: 120;
 }
 
 .buy-button {

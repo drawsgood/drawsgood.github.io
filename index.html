@@ -15,6 +15,7 @@
 </head>
 <body>
 	<header>
+		<div><canvas id="snow_Canvas" width="2000" height="1000"></canvas></div>
 		<nav>
 			<div id="logo">
 				<canvas id="canvas" class="myRiv" width="75" height="44.5"></canvas>
@@ -24,7 +25,9 @@
 				<li><a href="#about">About</a></li>
 				<li><a href="mailto:mike@drawsgood.com">Contact</a></li>
 			</ul>
+
 		</nav>
+		<div><canvas id="bulbs_Canvas" class="myRiv" width="2619" height="174"></canvas></div>
 	</header>
 	<section id="hero-container">
 		<div id="hero-wrapper">
@@ -293,6 +296,37 @@
         canvas: document.getElementById("canvas"),
         autoplay: true,
         // artboard: "Arboard", // Optional. If not supplied the default is selected
+        stateMachines: "State Machine 1",
+
+        onLoad: () => {
+          r.resizeDrawingSurfaceToCanvas();
+        },
+    });
+</script>
+<script>
+    const snow = new rive.Rive({
+        src: "/images/snow.riv",
+        // OR the path to a discoverable and public Rive asset
+        // src: '/public/example.riv',
+        canvas: document.getElementById("snow_Canvas"),
+        autoplay: true,
+        artboard: "Artboard",
+		layout: new rive.Layout({fit: 'scaleDown', alignment: 'topLeft'}),
+        stateMachines: "State Machine 1",
+        onLoad: () => {
+          r.resizeDrawingSurfaceToCanvas();
+        },
+    });
+</script>
+<script>
+    const bulbs = new rive.Rive({
+        src: "/images/holiday_lights.riv",
+        // OR the path to a discoverable and public Rive asset
+        // src: '/public/example.riv',
+        canvas: document.getElementById("bulbs_Canvas"),
+        autoplay: true,
+        artboard: "comp",
+		layout: new rive.Layout({fit: 'scaleDown', alignment: 'topLeft'}),
         stateMachines: "State Machine 1",
         onLoad: () => {
           r.resizeDrawingSurfaceToCanvas();
